@@ -4,9 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pali e Dispari</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
         <script src="./assets/js/main.js" defer></script>
     </head>
     <body>
 
+        <form id="form_even_odd">
+            <input type="text" id="user_word" placeholder="Pari o dispari?" required>
+            <input type="number" id="user_number" placeholder="Scegli un numero da 1 a 5" required>
+
+            <button id="btn_even_odd">Gioca!</button>
+        </form>     
+
+        <div class="cpu_number"></div>
     </body>
 </html>
