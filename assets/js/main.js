@@ -11,11 +11,20 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 
 //PARI E DISPARI
 //far scegliere pari o dispari
+const userChoice = prompt('Pari o dispari?');
+console.log(userChoice);
 
 //far inserire un numero da 1 a 5
+const userNumber = prompt('Scegli un numero da 1 a 5');
+console.log(userNumber);
 
 //generare un numero da 1 a 5 per il computer, con una funzione
+function numberGenerator(){
+    let cpuNumber = Math.floor((Math.random() * 5) + 1);
+    return cpuNumber
+}
 
+console.log(numberGenerator());
 //sommare i numeri 
 
 //stabilire se la somma dei due numeri è pari o dispari, con una funzione
