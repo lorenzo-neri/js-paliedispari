@@ -13,7 +13,7 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 //PARI E DISPARI
 //far scegliere pari o dispari
 const userChoice = prompt('Pari o dispari?');
-console.log(userChoice);
+console.log(userChoice.toLowerCase());
 
 //far inserire un numero da 1 a 5
 const userNumber = Number(prompt('Scegli un numero da 1 a 5'));
@@ -21,27 +21,25 @@ console.log(userNumber);
 
 //generare un numero da 1 a 5 per il computer, con una funzione
 function numberGenerator(){
-    let cpuNumber = Math.floor((Math.random() * 5) + 1);
-    console.log(cpuNumber);
-    return cpuNumber
+    return Math.floor((Math.random() * 5) + 1);
 }
-
-//console.log(numberGenerator());
 
 //sommare i numeri 
 const sum = userNumber + (numberGenerator());
+const cpuNumber = sum - userNumber
+console.log(cpuNumber);
 console.log(sum);
 
 //stabilire se la somma dei due numeri è pari o dispari, con una funzione
-function decreeToEvenOrOdd() {
-    if(sum % 2 === 0){
-        console.log('Il risultato è pari!!');
-    } else {
-        console.log('Il risultato è dispari!!!');
-    } return  
+function isEven(number) {
+    return number % 2 === 0;
 }
 
-console.log(decreeToEvenOrOdd());
+if (isEven(sum) && userChoice === 'pari'){
+    console.log('La somma è pari!! Hai vinto!!😃');
+} else if (isEven(sum) && userChoice !== 'pari'){
+    console.log('La somma è pari!! Hai perso!!😔');
+} 
 
 
 
