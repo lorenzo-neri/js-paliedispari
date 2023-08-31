@@ -33,10 +33,16 @@ const sum = userNumber + (numberGenerator());
 console.log(sum);
 
 //stabilire se la somma dei due numeri è pari o dispari, con una funzione
-if(sum % 2 === 0){
-    console.log('Il risultato è pari!!');
-} else {
-    console.log('Il risultato è dispari!!!');
+function decreeToEvenOrOdd() {
+    if(sum % 2 === 0){
+        console.log('Il risultato è pari!!');
+    } else {
+        console.log('Il risultato è dispari!!!');
+    } return  
 }
+
+console.log(decreeToEvenOrOdd());
+
+
 
 //dichiarare chi ha vinto
