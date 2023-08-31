@@ -12,7 +12,7 @@ Chiedere all’utente di inserire una parola Creare una funzione per capire se l
 
 //PARI E DISPARI
 //far scegliere pari o dispari
-/* const userChoice = (prompt('Pari o dispari?')).toLowerCase();
+const userChoice = (prompt('Pari o dispari?')).toLowerCase();
 if(userChoice != 'pari' && userChoice != 'dispari'){
     alert('Si prega di scegliere tra pari o dispari');
     location.reload(userChoice);
@@ -49,14 +49,14 @@ if (isEven(sum) && userChoice === 'pari') {
     console.log('La somma è dispari! Hai vinto!!😃');
 } else if (!isEven(sum) && userChoice !== 'dispari') {
     console.log('La somma è dispari! Hai perso!!😔');
-} */
+}
 
 //PALINDROMA
 //chiedo parola all'utente
 const userWord = prompt('Scrivi una parola e ti dirò se è palindroma');
 
 //divido la parola
-const dividedWord = userWord.split('');
+/* const dividedWord = userWord.split('');
 console.log(dividedWord);
 
 //inverto la parola scomposta
@@ -65,16 +65,25 @@ console.log(reverseDivideWord);
 
 //unisco le lettere della parola scomposta
 const invertedWord = reverseDivideWord.join('');
-console.log(invertedWord);
+console.log(invertedWord);*/
+
+
+//funzione per capire se la parola inserita è palindroma
+
+function toReverseWord(wrd){
+    const invertedWord = wrd.split('').reverse().join('');  
+    return invertedWord;
+}
+
+const invertedWord = toReverseWord(userWord)
+
+console.log(toReverseWord(userWord));
 
 if (userWord == invertedWord) {
     console.log('La parola è palindroma');
 } else {
     console.log('La parola non è palindroma');
-}
-
-//funzione per capire se la parola inserita è palindroma
-
+} 
 
 
 
