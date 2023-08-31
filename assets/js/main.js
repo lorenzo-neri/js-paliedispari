@@ -20,14 +20,14 @@ const userNumber = Number(prompt('Scegli un numero da 1 a 5'));
 console.log(userNumber);
 
 //generare un numero da 1 a 5 per il computer, con una funzione
-function numberGenerator(){
+function numberGenerator() {
     return Math.floor((Math.random() * 5) + 1);
 }
 
 //sommare i numeri 
 const sum = userNumber + (numberGenerator());
-const cpuNumber = sum - userNumber
-console.log(cpuNumber);
+const cpuNumber = sum - userNumber       //facoltativo
+console.log(cpuNumber);       //facoltativo
 console.log(sum);
 
 //stabilire se la somma dei due numeri è pari o dispari, con una funzione
@@ -35,12 +35,16 @@ function isEven(number) {
     return number % 2 === 0;
 }
 
-if (isEven(sum) && userChoice === 'pari'){
-    console.log('La somma è pari!! Hai vinto!!😃');
-} else if (isEven(sum) && userChoice !== 'pari'){
-    console.log('La somma è pari!! Hai perso!!😔');
-} 
-
-
-
 //dichiarare chi ha vinto
+if (isEven(sum) && userChoice === 'pari') {
+    console.log('La somma è pari!! Hai vinto!!😃');
+} else if (isEven(sum) && userChoice !== 'pari') {
+    console.log('La somma è pari!! Hai perso!!😔');
+} else if (!isEven(sum) && userChoice === 'dispari') {
+    console.log('La somma è dispari! Hai vinto!!😃');
+} else if (!isEven(sum) && userChoice !== 'dispari') {
+    console.log('La somma è dispari! Hai perso!!😔');
+}
+
+
+
