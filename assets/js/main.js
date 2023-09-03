@@ -103,9 +103,6 @@ buttonClear.addEventListener('click', function (e) {
 })
 
 
-
-
-
 //PALINDROMA
 //chiedo parola all'utente
 /* const userWord = prompt('Scrivi una parola e ti dirò se è palindroma'); */
